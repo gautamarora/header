@@ -1,0 +1,31 @@
+.header {
+  .topbar {
+    
+  }
+  .sidebar {
+    @extend .col-xs-3;
+    @extend .col-md-2;
+    background: #E9E9E9;
+    border-right: 1px solid #c2c2c2;
+    position: fixed !important;
+    display: block;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    @media (max-width: 768px) {
+      padding-left: 0px !important;
+    }
+    li {
+      @extend .text-capitalize;
+      .active {
+        font-weight: bold;
+      }
+    }
+  }
+  .topbar {
+    .large {
+      font-size: 24px;
+    }
+  }
+}

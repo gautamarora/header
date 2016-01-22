@@ -1,0 +1,11 @@
+<div class="header">
+  <div class="sidebar">
+    <ul class="nav navbar-stacked">
+      {{#each header.sidebar}}
+        <li class="{{this.name}}-link">
+          <a href="{{this.url}}" class="{{#if this.active}}active{{/if}}">{{this.name}} <span class="badge"></span></a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

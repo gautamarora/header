@@ -1,0 +1,17 @@
+{
+  "name": "@gautamarora/header",
+  "version": "0.0.1",
+  "description": "microapp - header",
+  "main": "./app/index.js",
+  "browser": "./client/self/index.js",
+  "main.scss": "./styles/index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gautam Arora",
+  "license": "ISC",
+  "dependencies": {
+    "1t": "^0.1.0",
+    "once": "^1.3.3"
+  }
+}
