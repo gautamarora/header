@@ -1,6 +1,8 @@
 .header {
   .topbar {
-    
+    .title {
+      @extend .text-captialize;
+    }
   }
   .sidebar {
     @extend .col-xs-3;

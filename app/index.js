@@ -11,7 +11,8 @@ var HEADER = '_header_';
 singleton(HEADER, module, function () {
 // #define
 
-var sidebar;
+var topbar = {};
+var sidebar = {};
 
 module.exports.init = once(function(app, express, options) {
   console.log('header app init');
@@ -21,6 +22,9 @@ module.exports.init = once(function(app, express, options) {
 });
 
 module.exports.setInitialState = function(state) {
+  if(state.topbar && state.topbar.title) {
+    topbar.title = state.topbar.title;
+  }
   if(state.sidebar) {
     sidebar.push(state.sidebar);
   }
@@ -28,9 +32,8 @@ module.exports.setInitialState = function(state) {
 
 module.exports.processData = function(microapp, req, res, cb) {
   res.data.header = {};
-  res.data.header.topbar = {};
+  res.data.header.topbar = topbar;
   res.data.header.sidebar = sidebar;
-  res.data.header.topbar.title = 'My Blog';
   res.data.header.sidebar.forEach(function(element) {
     if(element.microapp === microapp) {
       element.active = true;
