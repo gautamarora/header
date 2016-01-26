@@ -1,6 +1,6 @@
 {
   "name": "@gautamarora/header",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "microapp - header",
   "main": "./app/index.js",
   "browser": "./client/self/index.js",
